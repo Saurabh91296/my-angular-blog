@@ -1,0 +1,20 @@
+
+<div class="full-page">
+  <br><br><br><br>
+  <div class="card card-container">
+    <form class="form-signin" #loginForm="ngForm"  (ngSubmit)="login(loginForm.value)">
+      <span id="reauth-email" class="reauth-email"></span>
+      <input type="text" id="inputUser" class="form-control" placeholder="User Name" required autofocus name="username" [(ngModel)]="username">
+      <br>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name="password" [(ngModel)]="password">
+      <br>
+      <div id="remember" class="checkbox">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <br>
+      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+    </form><!-- /form -->
+  </div><!-- /card-container -->
+</div>

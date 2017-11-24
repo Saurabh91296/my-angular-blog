@@ -1,0 +1,47 @@
+.table{
+  font-size:14px;
+}
+th{
+  padding-left:4%;
+  cursor: pointer;
+}
+th:link {
+  color: grey;
+}
+
+/* visited link */
+th:visited {
+  color: green;
+}
+
+/* mouse over link */
+th:hover {
+  color: hotpink;
+}
+
+/* selected link */
+th:active {
+  color: blue;
+}
+li{
+  font-weight: 600;
+  cursor: pointer;
+}
+li:link {
+  color: grey;
+}
+
+/* visited link */
+li:visited {
+  color: green;
+}
+
+/* mouse over link */
+li:hover {
+  color: hotpink;
+}
+
+/* selected link */
+li:active {
+  color: blue;
+}

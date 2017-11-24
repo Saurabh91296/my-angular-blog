@@ -1,0 +1,41 @@
+<app-nav-bar></app-nav-bar>
+
+<app-masthead></app-masthead>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+    <table class="table">
+  <thead>
+  <tr style="color:grey">
+    <th (click)="loadBlogs('all')">home</th>
+    <th (click)="loadBlogs('Technology')">Technology</th>
+    <th (click)="loadBlogs('Creativity')">Creativity</th>
+    <th (click)="loadBlogs('Management')">Management</th>
+    <th (click)="loadBlogs('Life Style')">Life Style</th>
+  </tr>
+  </thead>
+</table></div>
+<div class="col-sm-2"></div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-2">
+    <ul *ngIf="loggedIn" style="list-style-type:none">
+      <li (click)="loadUsersFav()">My Favourites</li><br>
+      <li (click)="createBlog()">Create Blog</li><br>
+      <li (click)="loadUsersBlogs()">My Blogs</li><br>
+      <li (click)="logout()">Log Out</li>
+    </ul>
+  </div>
+  <div class="col-sm-8"><app-blog-content [blogs]="blogs" ></app-blog-content>
+   </div>
+  <div class="col-sm-2">
+    <h6>Search Blogs..</h6>
+    <input type="text" placeholder="Search..." name="search" (ngModelChange)="updateSearch()" [(ngModel)]="search">
+  </div>
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+

@@ -1,0 +1,14 @@
+
+<div class="card"  >
+  <img (click)="readBlog()" class="card-img-top" src="data:image/png;base64,{{blog.logo}}" alt="Card image" style="width:100%">
+  <div class="card-body">
+    <h4 class="card-title">{{blog.title}}</h4>
+    <p class="card-text">{{blog.content.substr(0,30)}}</p>
+    <hr/>
+    <div style="padding-top: 10px">
+      <span><i style="color:gray">{{blog.namePostedBy}}</i></span>
+      <i *ngIf="!favourite" style="float: right" class="fa fa-heart-o" (click)="changeFavourite()"></i>
+      <i *ngIf="favourite" style="color: red;float: right" class="fa fa-heart" (click)="changeFavourite()"></i>
+    </div>
+  </div>
+</div>

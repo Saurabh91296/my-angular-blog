@@ -1,0 +1,25 @@
+<app-nav-bar></app-nav-bar>
+<br><br><br>
+<h2 style="text-align: center">{{blog.title}}</h2>
+<div class="row">
+  <div class="col-sm-3">
+
+  </div>
+  <div class="col-sm-7" style="margin-left: 13%" >
+    <img  src="data:image/png;base64,{{blog.logo}}" alt="Card image" style="width:50%">
+  </div>
+  <div class="col-sm-2">
+  </div>
+  </div><br>
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+     <p style="text-align: justify">{{blog.content}}</p>
+    </div>
+    <div *ngIf="loggedIn" class="col-sm-2">
+      <button (click)="editBlog()" type="button" class="btn btn-primary btn-xs">Edit</button>
+      <button (click)="deleteBlog()" type="button" class="btn btn-danger btn-xs">delete</button>
+
+    </div>
+</div>
